@@ -12,12 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('crud');
+    return view('post');
 });
 
-Route::get('{crud?}/{id?}', function () {
-    return view('crud');
-})->where(['crud' => '(list|create|edit|view)', 'id' => '[0-9]+']);
+//Route::get('{crud?}/{id?}', function () {
+//    return view('crud');
+//})->where(['crud' => '(list|create|edit|view)', 'id' => '[0-9]+']);
 
 Route::get('posts/all', 'PostsController@getAll');
 
